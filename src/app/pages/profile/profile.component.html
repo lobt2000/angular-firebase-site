@@ -1,0 +1,45 @@
+<div class="container rounded border text-monospace   mt-3 mb-3 color" >
+    <div class="d-flex">
+    <div class="d-flex justify-content-center w-50 mb-3 mt-3">
+    <img [attr.src]="userImage" class="w-75 shadow p-3  mr-3 bg-white rounded" alt="">
+</div>
+
+<div class="w-75">
+    <h2 class="text-center text-uppercase">{{ profUser.email }}</h2>
+    <div class="d-flex w-100 justify-content-center">
+    <div class="d-flex flex-column mt-3 mb-3 w-100">
+    <span class="text-center myclass font-italic font-weight-bold ">First name:</span>
+    <span class="text-center myclass font-italic font-weight-bold  ">Second name:</span>
+
+    <span class="text-center myclass font-italic font-weight-bold ">City:</span>
+
+        <span class="text-center myclass font-italic font-weight-bold ">State:</span>
+        <span class="text-center myclass font-italic font-weight-bold   ">ZIP:</span>
+    </div>
+    <div class="d-flex flex-column mt-3 mb-3 w-100">
+    <span class="text-center mystyle font-italic font-weight-bold ">{{profUser.firstName}}</span>
+    <span class="text-center mystyle font-italic font-weight-bold ">{{profUser.secondName}}</span>
+
+    <span class="text-center mystyle font-italic font-weight-bold ">{{ profUser.city }}</span>
+
+        <span class="text-center mystyle font-italic font-weight-bold ">{{profUser.state}}</span>
+        <span class="text-center mystyle font-italic font-weight-bold ">{{profUser.zip}}</span>
+    </div>
+  </div>
+    <!-- <h6 class="mt-3">{{blog?.date | date: 'MMM d, yyyy'}}</h6> -->
+    <!-- <button (click)="location.back()" class="btn btn-info mb-3">Back</button> -->
+</div>
+</div>
+<div class="d-flex justify-content-around w-75 mymargine">
+<button class="btn btn-secondary " (click)="changeImg()">Change profile photo</button>
+<div class="input-group ml-3" *ngIf="img">
+    <div class="input-group-prepend">
+      <span class="input-group-text">Upload</span>
+    </div>
+    <div class="custom-file">
+      <input type="file" class="custom-file-input" id="categoryIcon" (change)="uploadFile($event)">
+      <label class="custom-file-label" for="categoryIcon">Choose file</label>
+    </div>
+  </div>
+</div>
+</div>
